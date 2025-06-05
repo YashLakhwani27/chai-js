@@ -40,10 +40,34 @@ console.log(str1  +  str2);
 // console.log(1 + 2 + "2");
 
 // this is due to ECMA in js opreations type perform in sequential way
-console.log(1 + 2 + "2");
-console.log(1 + "2" + "2"); 
-console.log(1 + "2" + "2");
-console.log(1 + "2" + 2);
+// console.log(1 + 2 + "2");
+// console.log(1 + "2" + "2"); 
+// console.log(1 + "2" + "2");
+// console.log(1 + "2" + 2);
 
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Primitive) , Heap(Non-Primitive)
+
+let ytName = "yashlakhwani"
+let anotherName = ytName
+
+console.log(ytName);
+
+anotherName = "chai aur code" // this is a another copy made in Stack memory and changes occur in copy value
+
+console.log(anotherName); 
+
+let userOne = {
+    email : "user1@google.com",
+    upiId : "user@okicici.com"
+}
+
+let userTwo = userOne // Assigning a reference to the variable
+
+userTwo.email = "yash@google.com" // changes occur in original value
+
+console.log(userTwo.email);
+console.log(userOne.email);
 
