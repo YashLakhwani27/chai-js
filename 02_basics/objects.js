@@ -45,17 +45,63 @@ JSUser.greetingTwo = function(){
     
 }
 
-console.log(JSUser.greeting);
-console.log(JSUser.greeting());
-console.log(JSUser.greetingTwo());
+// console.log(JSUser.greeting);
+// console.log(JSUser.greeting());
+// console.log(JSUser.greetingTwo());
+
+const tinderUser = new Object()
+console.log(tinderUser); // give empty object 
+
+const regularUser = {
+    name: "Sammy",
+    id: "sammy@google.com",
+    isLoggedIn: false
+}
+
+const User = {
+    email : "yash@google.com",
+    full_name:{
+        userFullName:{
+            firstName : "Yash",
+            lastName : "Lakhwani"
+        }
+    },
+    age : 20
+}
+
+// console.log(User.full_name.userFullName.firstName);
+
+const obj1 = {1 : "a" , 2 : "b"}
+const obj2 = {3 : "c" , 4 : "d"}
+
+// const obj3 = Object.assign({} , obj1 , obj2) // returns a change in  first value so we give new object as target otherwise chamges occur in obj1
+const obj3 = {...obj1 , ...obj2}
+// console.log(obj3);
 
 
+// console.log(Object.keys(regularUser));
+// console.log(Object.values(regularUser));
+// console.log(Object.entries(regularUser));
 
+// console.log(Object.hasOwnProperty('isLoggedIn'));
 
+// objects de-structure
 
+const course = {
+    coureseName : "js in hindi",
+    price : 999,
+    courseStudent : "Yash Lakhwani"
+}
 
+console.log(course.courseStudent);
 
+const {courseStudent : student} = course
+console.log(student);
 
+// const navbar = ({company}) => {
+
+// }
+// navbar(company = "yash") // Syntax in React
 
 
 
