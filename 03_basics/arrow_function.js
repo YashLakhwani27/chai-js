@@ -54,3 +54,19 @@ console.log(name());
 
 
 
+// Immediatealy Invoked Function Expressions (IIFE)
+
+(function chai(){
+    console.log("DB CONNECTED");
+    
+})();
+
+(() => {
+    console.log("DB CONNECTED 2");
+})();
+
+(aurcode = (name) => {
+    console.log(`DB CONNECTED ${name}`);
+})("Yash")
+
+
