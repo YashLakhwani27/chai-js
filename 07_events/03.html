@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body>
+    <h1>Chai aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+ // set Interval 
+    // setInterval(function(){
+    //     console.log("Yash" , Date.now());
+        
+    // },1000)
+
+ // Also have 3 parameters
+//     function sayDate(str){
+//         console.log(str , Date.now());
+        
+//     }
+//    const change =  setInterval(sayDate , 1000 , "Yash Lakhwani")
+//    clearInterval(change)
+
+    function printName(){
+            console.log("Yash Lakhwani " , Date.now());
+    }
+    let changeMe;
+
+        document.querySelector('#start').addEventListener('click',function(e){
+            changeMe =   setInterval(printName , 1000)
+        })
+
+    document.querySelector('#stop').addEventListener('click',function(e){
+            clearInterval(changeMe)
+            changeMe = null;
+            console.log("STOPPED");
+            
+    })
+
+</script>
+</html>
