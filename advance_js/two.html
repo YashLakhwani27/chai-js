@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    body{
+        background-color: #212121;
+        color: #ffff
+    }
+    .container{
+        width: 500px;
+        height: 350px;
+        margin: 70px;
+        background-color: pink;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display : flex
+    }
+    p{
+        display: block;
+    }
+    img{
+        width: 250px;
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="container">
+    </div>
+</body>
+
+<script>
+
+    const url = 'https://api.github.com/users/hiteshchaudhary'
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET' , url)
+    const image =  document.createElement("img")
+    const p = document.createElement('p')
+    xhr.onreadystatechange = function (){
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            image.src = data.avatar_url;
+            image.alt = "Image"
+            p.innerHTML = data.followers
+            document.querySelector('.container').appendChild(image)
+            document.querySelector('.container').appendChild(p)
+        }
+    };
+    
+        xhr.send();
+
+</script>
+</html>
